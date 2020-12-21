@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- vuejs cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <!-- axios cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app" class="container">
+
+    <header>
+      <div class="left-header">
+        <img id="logo" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="">
+      </div>
+      <div class="right-header">
+        <input type="text" name="" value="" v-model="movieSearch" placeholder="cerca film">
+        <button type="button" name="button" @click="getMovieCover">Cerca</button>
+      </div>
+    </header>
+
+    <div id="movie-container">
+
+      <div class="movie" v-for="movie in movies">
+        <img class="movie-cover" :src="movie.poster_path" alt="">
+
+        <div class="details">
+          <h4>Titolo: <span></span></h4>
+          <h4>Titolo originale: <span></span></h4>
+          <h4>Voto: <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></h4>
+          <h4>Overview: <span></span></h4>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
